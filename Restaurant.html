@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>RESTAURANT</title>
+<head>
+<style>
+
+div.a {
+  position: relative;
+  width: 1500px;
+  height: 100px;
+  background-color: black;
+  color: whitesmoke;
+}
+
+button.b {
+  position: absolute;
+  right: 20px;
+  width: 60px;
+  color: LightGray;
+  background-color: black;
+  border-color: black;
+  top: 40%;
+} 
+
+button.c {
+  position: absolute;
+  right: 140px;  
+  width: 60px;
+  color: LightGray;
+  background-color: black;
+  border-color: black;
+   top: 40%;
+} 
+button.d {
+  position: absolute;
+  right: 260px;  
+  width: 60px;
+  color: LightGray;
+  background-color: black;
+  border-color: black;
+   top: 40%;
+} 
+button.e {
+  position: absolute;
+  right: 380px;  
+  width: 60px;
+  color: LightGray;
+  background-color: black;
+  border-color: black;
+   top: 40%;
+}
+button.f{
+	position: absolute;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	color: gray;
+	border-radius: 50%;
+	background-color: black;
+	top: 55%;
+}
+button.g{
+	position: absolute;
+	left: 10px;
+	width: 40px;
+	height: 40px;
+	color: gray;
+	border-radius: 50%;
+	background-color: black;
+	top: 55%;
+}
+button:hover{
+	color: white;
+	cursor: pointer;
+} 
+.center {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
+  height: 650px;
+}
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+        window.displayImgCount = 0;
+        function cycleImage(){
+            if (displayImgCount !== 0) {
+                document.getElementById("img" + displayImgCount).style.display = "none";
+            }
+            displayImgCount = displayImgCount === 5 ? 1 : displayImgCount + 1;
+            document.getElementById("img" + displayImgCount).style.display = "block";
+            setTimeout(cycleImage, 4000);
+        }
+        cycleImage();
+    }
+</script>
+</head>
+<body>
+
+
+<div class="a">
+  <button class="b" onclick="document.location='timer.html'">Cart</button>
+  <button class="c">Contact</button>
+  <button class="d" onclick="document.location='Menu.html'">Menu</button>
+  <button class="e">Home</button>
+</div>
+<div>
+<img id="img1" src="images\img2.jpeg" class="center">
+<img id="img2" src="images\img1.jpeg" class="center" >
+<img id="img3" src="images\img.jpeg" class="center">
+<img id="img4" src="images\img3.jpeg" class="center">
+<img id="img5" src="images\WhatsApp Image 2021-07-13 at 10.11.38.jpeg" class="center">
+</div>
+
+</body>
+</html>
